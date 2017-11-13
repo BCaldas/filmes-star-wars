@@ -37,6 +37,11 @@ $ npm start
 - Abra o navegador e navegue até o endereço "http://localhost:3000".
 - Se desejar mudar a porta, altere a propriedade "port" do arquivo "server/settings.js".
 
+## Observações
+
+- O código do servidor da api local encontra-se na pasta "server".
+- O código da view feito com React encontra-se na pasta "src".
+
 ## Requerimentos
 
 - Node 8.4
