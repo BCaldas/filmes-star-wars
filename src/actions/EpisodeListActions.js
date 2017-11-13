@@ -13,7 +13,7 @@ export const fetchAll = () => dispatch => {
     SWRequest
         .fetchAll()
         .then(episodes => dispatch(onEpisodesChange(episodes)))
-        .catch(e => alert("Erro ao obter a lista de episódios :/"))
+        .catch(e => alert("Erro ao obter a lista de episódios:" + e.message));
 };
 
 export const handleFavoriteChange = ep => dispatch => {
@@ -21,5 +21,5 @@ export const handleFavoriteChange = ep => dispatch => {
         .setAsFavorite(ep)
         .then(() => SWRequest.fetchAll())
         .then(episodes => dispatch(onEpisodesChange(episodes)))
-        .catch(e => alert("Erro ao mudar"))
+        .catch(e => alert("Erro ao mudar: " + e.message));
 };
