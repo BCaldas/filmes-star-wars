@@ -12,14 +12,17 @@ export const onEpisodesChange = episodes => ({
 export const fetchAll = () => dispatch => {
     SWRequest
         .fetchAll()
-        .then(episodes => dispatch(onEpisodesChange(episodes)))
-        .catch(e => alert("Erro ao obter a lista de episódios:" + e.message));
+        .then(({data}) => dispatch(onEpisodesChange(data)))
+        .catch(e => alert("Erro ao obter a lista de episódios :/"))
 };
 
 export const handleFavoriteChange = ep => dispatch => {
     SWRequest
         .setAsFavorite(ep)
-        .then(() => SWRequest.fetchAll())
-        .then(episodes => dispatch(onEpisodesChange(episodes)))
-        .catch(e => alert("Erro ao mudar: " + e.message));
+        .then(() => {
+            console.log("Chegou");
+            return SWRequest.fetchAll();
+            })
+        .then(({data}) => dispatch(onEpisodesChange(data)))
+        .catch(e => alert("Erro ao mudar"))
 };

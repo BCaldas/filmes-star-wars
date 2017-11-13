@@ -1,4 +1,4 @@
-import {ON_EPISODES_CHANGE} from "../actions/EpisodeListActions";
+import {ON_EPISODES_CHANGE} from "../actions/EpisodeActions";
 
 const episodesReducer = (state = {episodes: []}, action) => {
 

@@ -1,20 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import './App.css';
-import CounterContainer from './containers/CounterContainer';
+import EpisodesListContainer from "./containers/EpisodesListContainer";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-
-        </header>
-
-          <CounterContainer/>
-
-      </div>
-    );
-  }
+export default class App extends React.Component {
+    render() {
+        return (
+            <div className="App">
+                <EpisodesListContainer />
+            </div>
+        );
+    }
 }
-
-export default App;

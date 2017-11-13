@@ -1,7 +1,12 @@
 import React from "react";
-import episodeItem from "./EpisodeItem";
+import EpisodeItem from "./EpisodeItem";
 
-class EpisodesList extends React.Component {
+export default class EpisodesList extends React.Component {
+
+    componentDidMount() {
+        this.props.init();
+    }
+
     render() {
         const {episodes, handleFavorite} = this.props;
 
@@ -15,3 +20,5 @@ class EpisodesList extends React.Component {
         );
     }
 }
+
+

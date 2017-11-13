@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import counterReducer from './reducers/CounterReducer';
+import episodesListReducer from './reducers/EpisodesListReducer';
 import './index.css';
 import App from './App';
 //import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(
     combineReducers({
-            counter: counterReducer
+            episodesList: episodesListReducer
         }),
     applyMiddleware(thunk)
 );
