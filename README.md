@@ -1,22 +1,16 @@
 
 # Sistema de Filmes Favoritos do Star Wars
 
-Pequeno sistema web para listagem dos filmes da série Star Wars consumidos da API SWAPI (https://swapi.co/) com possibilidade de marcar os filmes favoritos
+Pequeno sistema web para listagem dos filmes da série Star Wars consumidos da API SWAPI (https://swapi.co/) com possibilidade de marcar os filmes favoritos.
 
 ## Tecnologias Usadas:
 
 - Javascript
-
-- Node
-
+- Node 8.4
 - Sqlite
-
 - React
-
 - Redux
-
 - Express
-
 - WebPack
 
 ## Bibliotecas de Terceiros:
@@ -26,7 +20,7 @@ Pequeno sistema web para listagem dos filmes da série Star Wars consumidos da A
 
 ## Instalação
 
-- Clone o repostório dentro da pasta desejada.
+- Clone o repositório dentro da pasta desejada.
 - Instale as dependências necessárias com o comando:
 ```bash
 $ npm install
@@ -45,7 +39,7 @@ $ npm start
 
 ## Requerimentos
 
-- Node 8
+- Node 8.4
 - Navegador web atualizado
 
 
