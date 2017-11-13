@@ -2,7 +2,7 @@ const Db = require("./index");
 
 const getFilmById = filmeId => {
     return new Promise((resolve, reject) => {
-        Db.get(`SELECT * FROM Filmes WHERE FilmeId = ?`, [filmeId], (err, row) => {
+        Db.get(`SELECT * FROM Filmes WHERE filmeId = ?`, [filmeId], (err, row) => {
             if (err) {
                 reject(err.message);
             }
@@ -13,7 +13,7 @@ const getFilmById = filmeId => {
 
 const insertFilm = (filmeId, favorito) => {
     return new Promise((resolve, reject) => {
-        Db.run(`INSERT INTO Filmes(FilmeId, Favorito) VALUES(?,?)`, [filmeId, favorito],
+        Db.run(`INSERT INTO Filmes(filmeId, favorito) VALUES(?,?)`, [filmeId, favorito],
             err => {
                 if (err) {
                     reject(err.message);
@@ -26,7 +26,7 @@ const insertFilm = (filmeId, favorito) => {
 const updateFilm = (filmeId, favorito) => {
     return new Promise((resolve, reject) => {
         let data = [favorito, filmeId];
-        let sql = `UPDATE Filmes SET Favorito = ? WHERE FilmeId = ?`;
+        let sql = `UPDATE Filmes SET favorito = ? WHERE filmeId = ?`;
         Db.run(sql, data, (err) => {
             if (err) return reject(err);
             getFilmById(filmeId)

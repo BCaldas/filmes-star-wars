@@ -33,16 +33,16 @@ swMirror.get('/filmes', async(req, res) =>{
 });
 
 swMirror.post('/filmes', async(req, res) => {
-   try {
-       const data = req.body;
+    try {
+        const data = req.body;
         const filme = await filmes.updateFilmsFavorite(data.filmeId,data.favorito);
         res.send(filme);
-   } catch (e) {
-       res.status(500).send({
-           message: e.message
-       })
-   }
+    } catch (e) {
+        res.status(500).send({
+            message: e.message
+        })
+    }
 });
 
 swMirror.listen(settings.port, settings.host, ()=>
-console.log("SW MIRROR LISTEN ON "+settings.host+":" + settings.port));
+    console.log("SW MIRROR LISTEN ON "+settings.host+":" + settings.port));
