@@ -9,10 +9,10 @@ import App from './App';
 //import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(
-    combineReducers({
-            episodesList: episodesListReducer
-        }),
-    applyMiddleware(thunk)
+  combineReducers({
+    episodesList: episodesListReducer
+  }),
+  applyMiddleware(thunk)
 );
 
 ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));

@@ -2,11 +2,13 @@ import {ON_EPISODES_CHANGE} from "../actions/EpisodeActions";
 
 const episodesReducer = (state = {episodes: []}, action) => {
 
-    switch (action.type) {
+  switch (action.type) {
 
-        case ON_EPISODES_CHANGE: return Object.assign({}, state, action.payload);
-        default: return state;
-    }
+    case ON_EPISODES_CHANGE:
+      return Object.assign({}, state, action.payload);
+    default:
+      return state;
+  }
 };
 
-export default episodesReducer
+export default episodesReducer;

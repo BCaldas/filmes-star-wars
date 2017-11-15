@@ -3,12 +3,12 @@ import EpisodesList from "../components/EpisodesList";
 import {handleFavoriteChange, fetchAll} from "../actions/EpisodeActions";
 
 const mapStateToProps = state => {
-    console.log("APP STATE",state);
-    return state.episodesList;
+  console.log("APP STATE", state);
+  return state.episodesList;
 };
 const mapDispatchToProp = dispatch => ({
-    init: () => dispatch(fetchAll()),
-    handleFavorite: ep => dispatch(handleFavoriteChange(ep))
+  init: () => dispatch(fetchAll()),
+  handleFavorite: ep => dispatch(handleFavoriteChange(ep))
 });
 
-export default connect(mapStateToProps, mapDispatchToProp)(EpisodesList)
+export default connect(mapStateToProps, mapDispatchToProp)(EpisodesList);

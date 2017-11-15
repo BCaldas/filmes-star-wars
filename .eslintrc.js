@@ -10,11 +10,8 @@ module.exports = {
         "react"
     ],
     "rules": {
-        indent: ["error", 4, { "SwitchCase": 1 }],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
+        indent: ["error", 2, { "SwitchCase": 1 }],
+
         "semi": [
             "error",
             "always"

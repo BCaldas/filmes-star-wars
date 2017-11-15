@@ -50,6 +50,7 @@ const cssLoader = ExtractTextPlugin.extract({
 if (!isProd) {
     jsLoader.push("eslint-loader");
 } else {
+    jsLoader.push("eslint-loader");
     plugins.push(new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false,
