@@ -3,7 +3,6 @@ import EpisodesList from "../components/EpisodesList";
 import {handleFavoriteChange, fetchAll} from "../actions/EpisodeActions";
 
 const mapStateToProps = state => {
-  console.log("APP STATE", state);
   return state.episodesList;
 };
 const mapDispatchToProp = dispatch => ({

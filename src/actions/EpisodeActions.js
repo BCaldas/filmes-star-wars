@@ -20,7 +20,6 @@ export const handleFavoriteChange = ep => dispatch => {
   SWRequest
     .setAsFavorite(ep)
     .then(() => {
-      console.log("Chegou");
       return SWRequest.fetchAll();
     })
     .then(({data}) => dispatch(onEpisodesChange(data)))
