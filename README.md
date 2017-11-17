@@ -17,6 +17,7 @@ Pequeno sistema web para listagem dos filmes da série Star Wars consumidos da A
 
 - Axios para realizar chamadas HTTP a apis's (https://github.com/axios/axios)
 - Babel para transpilação de código (https://babeljs.io/)
+- Material UI para estilização (http://www.material-ui.com/#/)
 
 ## Instalação
 
